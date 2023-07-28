@@ -1,4 +1,4 @@
-const numbers = document.querySelectorAll('.keys__number');
+const numbers = document.querySelectorAll('.numbers');
 const operations = document.querySelectorAll('.operations__btn');
 const screen = document.querySelector('.screen');
 const equal = document.getElementById('equal');
