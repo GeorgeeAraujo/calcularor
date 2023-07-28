@@ -58,7 +58,7 @@ body{
     margin: 1em;
 }
 
-.keys__number, .keys__period, .keys__delete{
+.keys__btn{
     border-radius: 35px;
     border: 0;
     padding: 1em 1.5em;
@@ -90,7 +90,7 @@ body{
     font-weight: 400;
 }
 
-.operations__btn:hover, .keys__number:hover, .keys__period:hover, .keys__delete:hover, .operations__equal:hover{
+.operations__btn:hover, .keys__btn:hover, .operations__equal:hover{
     opacity: 0.7;
 }
 
@@ -109,7 +109,7 @@ body{
 }
 
 @media (max-width: 1000px){
-    .keys__number, .keys__period, .keys__delete{
+    .keys__btn{
         padding: 0.5em 1em;
         font-size: 10px;
     }
