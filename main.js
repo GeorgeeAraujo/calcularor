@@ -1,12 +1,18 @@
-const numbers = document.querySelectorAll('.numbers');
-const operations = document.querySelectorAll('.operations__btn');
-const screen = document.querySelector('.screen');
-const equal = document.getElementById('equal');
-const del = document.getElementById('del');
-const clean = document.getElementById('clean');
+/* Declaração de variáveis e objeto com todos os elementos HTML da calculadora */
+
+const calculator = {
+    numbers: ()=> document.querySelectorAll('.numbers'),
+    operations: () => document.querySelectorAll('.operations__btn'),
+    screen: ()=> document.querySelector('.screen'),
+    equal: ()=>document.getElementById('equal'),
+    del: ()=> document.getElementById('del'),
+    clean: ()=>document.getElementById('clean'),
+    arrayOfOperationsValues: ['+', '-', '*', '**', '/', '%', '.'],
+    error: () => document.querySelector('.error')
+}
 let calc = '';
-const arrayOfOperationsValues = ['+', '-', '*', '**', '/', '%', '.'];
-const error = document.querySelector('.error');
+
+/*Chamada das funções */
 
 addNumbers();
 chooseOperation();
@@ -14,27 +20,30 @@ doTheOperation();
 deleteCharacter();
 cleanTheScreen();
 
-function addNumbers(){
-    numbers.forEach(number => number.addEventListener('click', event => addCharacter(event.target.value)));
+/*Declaração das funções */
+
+function addNumbers(){ //Função que adiciona um ouvinte de eventos ao números.
+    calculator.numbers().forEach(number => number.addEventListener('click', event => addCharacter(event.target.value)));
 }
 
-function addCharacter(character){
-    error.style.display = 'none';
+function addCharacter(character){ //Função que adiciona o caracter clicado na tela.
+    calculator.error().style.display = 'none';
     if(!isActionValid(character)){
+        console.log(isActionValid())
         calc += character;
-        screen.innerHTML += character;
+        calculator.screen().innerHTML += character;
     } else{
         throwErrorMesage();
     }
     
 }
 
-function chooseOperation(){
-    operations.forEach((operation) => operation.addEventListener('click', event => addCharacter(event.target.value)));
+function chooseOperation(){ //Função que permite a escolha da operação a ser realizada.
+    calculator.operations().forEach((operation) => operation.addEventListener('click', event => addCharacter(event.target.value)));
 }
 
-function doTheOperation(){
-    equal.addEventListener('click', () => {
+function doTheOperation(){ //Função que realiza a operação a partir do clique no botão de resultado ou chama a função de erro caso ocorra algum problema.
+    calculator.equal().addEventListener('click', () => {
         if(!calc==''){
             giveResult();
         } else {
@@ -43,35 +52,35 @@ function doTheOperation(){
     })
 }
 
-function giveResult(){
+function giveResult(){ //Realiza o cálculo a partir do método eval. 
     calc = eval(calc);
-    screen.innerHTML = calc;
+    calculator.screen().innerHTML = calc;
     calc = calc.toString();
 }
 
-function deleteCharacter(){
-    del.addEventListener('click', () => {
+function deleteCharacter(){ //Deleta caracteres da tela, a partir dos métodos de array split, pop e join.
+    calculator.del().addEventListener('click', () => {
         let calcToArray = calc.split('');
         calcToArray.pop();
         calc = calcToArray.join('');
-        screen.innerHTML = calc;
+        calculator.screen().innerHTML = calc;
     })
     
 }
 
-function cleanTheScreen(){
+function cleanTheScreen(){ //Remove todos os caracteres da tela.
     clean.addEventListener('click', () => {
-        screen.innerHTML = '';
+        calculator.screen().innerHTML = '';
         calc = '';
     })
 }
 
-function isActionValid(character){
-    return arrayOfOperationsValues.includes(character) && calc == '';
-}
+function isActionValid(character){ //Caso o usuário tente inserir uma operação antes de qualquer número,torna a operação inválida
+    return calculator.arrayOfOperationsValues.includes(character) && calc == '';
+}   
 
-function throwErrorMesage(){
-    error.style.display = 'block';
+function throwErrorMesage(){ //Mostra o erro na tela.
+    calculator.error().style.display = 'block';
 }
 
 
