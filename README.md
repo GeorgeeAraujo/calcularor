@@ -1,5 +1,5 @@
 <h1 align="center">
-     🧮 <a href="" alt="site da calculadora em javascript"> Calculadora em JavaScript </a>
+     🧮 <a href="calculator-delta-eosin.vercel.app" alt="site da calculadora em javascript"> Calculadora em JavaScript </a>
 </h1>
 <h3 align="center">
     Uma calculadora desenvolvida em HTML, CSS e Javascript. 
@@ -32,7 +32,7 @@ O objetivo principal do projeto foi praticar conceitos da linguagem de programa�
 - [x] Apagar todos os caracteres simultaneamente (limpar a tela).
 - [x] Responsividade para dispositivos móveis (tablets e celulares).
 
-<p> 👀 As funcionalidades descritas podem ser testadas no site oficial do projeto. ➡️ Clique <a href="">aqui.⬅️ </a></p>
+<p> 👀 As funcionalidades descritas podem ser testadas no site oficial do projeto. ➡️ Clique <a href="calculator-delta-eosin.vercel.app">aqui.⬅️ </a></p>
 
 ---
 
