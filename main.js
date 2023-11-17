@@ -28,8 +28,7 @@ function addNumbers(){ //Função que adiciona um ouvinte de eventos ao números
 
 function addCharacter(character){ //Função que adiciona o caracter clicado na tela.
     calculator.error().style.display = 'none';
-    if(!isActionValid(character)){
-        console.log(isActionValid())
+    if(!isActionInvalid(character)){
         calc += character;
         calculator.screen().innerHTML += character;
     } else{
@@ -75,7 +74,7 @@ function cleanTheScreen(){ //Remove todos os caracteres da tela.
     })
 }
 
-function isActionValid(character){ //Caso o usuário tente inserir uma operação antes de qualquer número,torna a operação inválida
+function isActionInvalid(character){ //Caso o usuário tente inserir uma operação antes de qualquer número,torna a operação inválida
     return calculator.arrayOfOperationsValues.includes(character) && calc == '';
 }   
 
