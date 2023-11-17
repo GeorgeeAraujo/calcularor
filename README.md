@@ -12,6 +12,20 @@
      <img src="https://img.shields.io/badge/CSS-blue?logo=css">
 </p>
 
+Índice
+=================
+<!--ts-->
+- [Sobre o projeto](#sobre-o-projeto)
+- [⚙️ Funcionalidades](#-funcionalidades)
+- [🛠️ Tecnologias](#-tecnologias)
+    + [**Website**](#-website)
+    + [**Utilitários**](#-utilit-rios)
+- [🎨 Layout](#-layout)
+  * [Website para desktops.](#website-para-desktops)
+  * [Website mobile.](#website-mobile)
+- [🦸 Autor](#-autor)
+- [📝 Licença](#-licen-a)
+<!--te-->
 
 ## Sobre o projeto
 
@@ -59,6 +73,15 @@ As seguintes tecnologias foram utilizadas no projeto:
 - Git e GitHub (https://git-scm.com/).
 
 --- 
+## 🎨 Layout
+
+### Website para desktops.
+<img src="./screenshots/calculator-desktop.png" width="800px">
+
+### Website mobile.
+<p align="center">
+     <img src="./screenshots/calculator-mobile.jpeg" >
+</p>
 
 
 ## 🦸 Autor
