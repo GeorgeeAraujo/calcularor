@@ -80,7 +80,7 @@ As seguintes tecnologias foram utilizadas no projeto:
 
 ### Website mobile.
 <p align="center">
-     <img src="./screenshots/calculator-mobile.jpeg" >
+     <img src="./screenshots/calculator-mobile.jpeg">
 </p>
 
 
